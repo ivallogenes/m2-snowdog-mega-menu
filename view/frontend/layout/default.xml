@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <body>
+    <referenceContainer name="page.top">
+      <block name="topnav-main" class="Snowdog\Menu\Block\Menu" after="navigation.sections" cacheable="false">
+        <arguments>
+            <argument name="menu" xsi:type="string">
+                main-menu-top
+            </argument>
+        </arguments>
+      </block>
+    </referenceContainer>
+  </body>
+</page>

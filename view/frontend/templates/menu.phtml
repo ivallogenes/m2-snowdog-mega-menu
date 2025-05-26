@@ -1,0 +1,41 @@
+<?php /** @var \Snowdog\Menu\Block\Menu $block */ ?>
+
+<?php if ($block->getMenu()): ?>
+    <?php $menuClass = $block->getMenu()->getCssClass() ?>
+
+    <section
+        data-mage-init='{
+            "snowdogMenu_extend": {
+                "menuClass": "<?= $menuClass ?>"
+            }
+        }'
+    >
+    <!-- Add the mobile icon el to Magento_Theme/templates/html/header/logo.phtml -->
+    <div class="<?= $menuClass ?>__mobile-bg"></div>
+    <div class="<?= $menuClass ?>__mobile">
+        <span class="<?= $menuClass ?>__mobile-icon"></span>
+    </div>
+
+        <nav
+            class="<?= $menuClass ?>"
+            data-mage-init='{"snowdogMenu": {}}'
+        >
+            <ul class="<?= $menuClass ?>__list">
+                <?php foreach ($block->getNodes() as $node): ?>
+                    <?php
+                        $childrenLevel = $node->getLevel() + 1;
+                        $children = $block->getNodes($childrenLevel, $node);
+                        $node->setIsParent((bool) $children);
+                        $parentClass = $children ? ' ' . $menuClass . '__item--parent' : '';
+                        $additionalClasses = $node->getClasses() ? ' ' . $node->getClasses() : '';
+                        $itemClasses = $parentClass . $additionalClasses;
+                    ?>
+                    <li class="<?= $menuClass ?>__item <?= $itemClasses ?>">
+                        <?= $block->renderMenuNode($node) ?>
+                        <?= $block->renderSubmenu($children, $node, $childrenLevel) ?>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        </nav>
+    </section>
+<?php endif; ?>
