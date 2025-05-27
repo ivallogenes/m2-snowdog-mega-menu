@@ -57,6 +57,11 @@ a. full-width-menu-item
 
     3.1 Upload an Image for each of the child category items.
 
+4. Use icon links by adding 1 of 3 OOTB icon styles to your top-level nodes:
+    a. sale-icon
+    b. contact-icon
+    c. hashtag-icon
+
 Checkout the [screenshots](https://github.com/ivallogenes/m2-snowdog-mega-menu/tree/master/view/frontend/web/screenshots).
 
 Included icons provided by Heroicons: [https://heroicons.com](https://heroicons.com)
