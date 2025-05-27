@@ -15,7 +15,7 @@ Snowdog Menu module: [https://github.com/SnowdogApps/magento2-menu](https://gith
 $ composer require snowdog/module-menu
 ```
 
-    1.1 Read more in Snowdog wiki: [https://github.com/SnowdogApps/magento2-menu/wiki/Setup](https://github.com/SnowdogApps/magento2-menu/wiki/Setup)
+1.1 Read more in Snowdog wiki: [https://github.com/SnowdogApps/magento2-menu/wiki/Setup](https://github.com/SnowdogApps/magento2-menu/wiki/Setup)
 
 2. After install is complete, from admin > Content > Menus
 
@@ -36,7 +36,7 @@ $ git clone git@github.com:ivallogenes/m2-snowdog-mega-menu.git .
 $ bin/magento s:up
 ```
 
-    3.1 Override menu.phtml template from the Snowdog Menu module:
+3.1 Override menu.phtml template from the Snowdog Menu module:
 
     a. Create a folder named Snowdog_Menu in your theme
 
